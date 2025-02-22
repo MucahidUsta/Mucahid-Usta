@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Default Images Creator</title>
+</head>
+<body>
+  <canvas id="profile" width="150" height="150"></canvas>
+  <canvas id="project" width="400" height="250"></canvas>
+
+  <script>
+    // Profile image
+    const profileCanvas = document.getElementById('profile');
+    const pctx = profileCanvas.getContext('2d');
+
+    pctx.fillStyle = '#4B5563';
+    pctx.fillRect(0, 0, 150, 150);
+    pctx.fillStyle = '#9CA3AF';
+    pctx.beginPath();
+    pctx.arc(75, 60, 30, 0, Math.PI * 2);
+    pctx.fill();
+    pctx.beginPath();
+    pctx.arc(75, 140, 50, Math.PI, Math.PI * 2);
+    pctx.fill();
+
+    // Project image
+    const projectCanvas = document.getElementById('project');
+    const ctx = projectCanvas.getContext('2d');
+
+    ctx.fillStyle = '#E5E7EB';
+    ctx.fillRect(0, 0, 400, 250);
+    ctx.fillStyle = '#9CA3AF';
+    ctx.font = '48px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('🖼️', 200, 125);
+    ctx.font = '24px Arial';
+    ctx.fillText('Proje Görseli', 200, 180);
+  </script>
+</body>
+</html> 
